@@ -1,0 +1,175 @@
+
+.Journal-Container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px 50px;
+}
+
+.Text-Container{
+    max-width: calc(100% - 379px);
+    width: 75%;
+}
+.Text-Container button{
+    margin-right: 15px;
+}
+button{
+    background: transparent;
+    color:black;
+
+}
+.Date-Container{
+    width:378px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+.date-control button{
+    border: none;
+    font-size: 2em;
+}
+@media screen and (max-width: 815px) {
+    .Journal-Container{
+        flex-direction: column;
+        padding: 0;
+    }
+    .Text-Container{
+        max-width: 100%;
+        width: 100%;
+        order: 1;
+        padding: 0 15px;
+    }
+    .Date-Container{
+        order: 2;
+        margin-bottom: 15px;
+        margin: auto;
+    }
+    .btn-grp{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+}
+@media screen and (max-width: 378px) {
+    .Date-Button{
+        max-width: calc((100vw / 7) * (5 / 9));
+        max-height: calc((100vw / 7) * (5 / 9));
+        margin: calc((100vw / 7) * (2 / 9));
+        line-height: calc((100vw / 7) * (5 / 9));
+    }
+    .Active-Date-Button{
+        max-width: calc((100vw / 7) * (5 / 9));
+        max-height: calc((100vw / 7) * (5 / 9));
+        margin: calc((100vw / 7) * (2 / 9));
+        line-height: calc((100vw / 7) * (5 / 9));
+    }
+    
+}
+.Journal-Text{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;
+    height: calc(100% - 96px);
+    resize: none;
+    min-height: 50vh;
+    margin-top: 30px;
+}
+.Date-Button{
+    background-color:bisque;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 12px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    text-align: center;
+    color: black;
+}
+.lastMonth-Button{
+    opacity: 0;
+}
+.week-names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+.Date-Button:hover{
+    filter:invert();
+    border-color: blue;
+    border-width: 2px;
+}
+.Old-Date-Button{
+    background-color: lightsteelblue;
+}
+.Active-Date-Button{
+    background-color: brown;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 12px;
+    text-align: center;
+    color: white;
+}
+.date-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.date-point-container{
+    text-align: left;
+}
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    pointer-events: none;
+    display: block; /* For Firefox */
+    opacity: 0.7;
+  }
+.alert{
+    position:fixed;
+    bottom: 0;
+    width: 100px;
+    background-color:rgb(244, 244, 244);
+    color: rgb(120, 120, 120);
+    text-align: center;
+}
+.delConf{
+    background-color: rgb(173, 0, 0);
+    color: white;
+}
+.Settings-Container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    z-index: 2;
+}
+
+.btn-grp > * {
+    margin: 0 10px !important;
+}
+.bp4-button-text{
+    text-align: center;
+}
+.btn-grp {
+    max-height: 30px;
+}
+
+.settings-btn-grp > *{
+    margin: 10px 0 !important;
+
+}
