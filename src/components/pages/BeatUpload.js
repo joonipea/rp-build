@@ -17,7 +17,7 @@ export const BeatUpload = () => {
     const filesMounted = useRef(false);
     const imageMounted = useRef(false);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         
         
@@ -26,12 +26,28 @@ export const BeatUpload = () => {
         if(imgUrl === "" || url === "") {
             alert("Please try again");
         } else {
-            await axios.post(`${process.env.REACT_APP_API_ENDPOINT}music/addSong`, data).then((res) => {
+            /*
+            axios.post(`${process.env.REACT_APP_API_ENDPOINT}music/addSong`, data).then((res) => {
                 console.log(res.data);
             }
             ).catch((err) => {
                 console.log(err);
             });
+            */
+            fetch(`${process.env.REACT_APP_API_ENDPOINT}music/addSong`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+                }).then((response) => {
+                    if (response.ok) {
+                        alert("Post added successfully");
+                    } else {
+                        alert("Error adding post");
+                    }
+                }
+            )
         }
 
 
@@ -42,12 +58,52 @@ export const BeatUpload = () => {
             console.log(file[0]);
             const urldata = new FormData();
             urldata.append("file", file[0]);
+            /*
             axios.post(`${process.env.REACT_APP_API_ENDPOINT}upload`, urldata).then((res) => {
                 console.log(res.data);
                 setUrl(`${process.env.REACT_APP_API_ENDPOINT}${res.data.fileName}`);
 
             })
             .catch((err) => {
+                console.log(err);
+            }) 
+            fetch(`${process.env.REACT_APP_API_ENDPOINT}upload`,{
+                method: "POST",
+                body: urldata,
+            }).then((res, data) => {
+                if(res.ok){
+                console.log(res.json());
+                console.log(data)
+                console.log(data.filename)
+                setUrl(`${process.env.REACT_APP_API_ENDPOINT}${data.filename}`);
+                }else{
+                    console.log("error");
+                }
+            })
+            */
+            async function getFileURL() {
+                const res = await fetch(`${process.env.REACT_APP_API_ENDPOINT}upload`,{
+                    method: "POST",
+                    body: urldata,
+                });
+                const data = await res.json();
+                console.log(data);
+                if(data.success === null) {
+                    console.log('loading');
+                    return getFileURL()
+                } else if (data.success === true) {
+                    console.log("success");
+                    return data;
+                } else if (data.result === "error") {
+                    console.log("error");
+                    return data;
+                }
+            }
+            getFileURL().then(data => {
+                console.log(data);
+                setUrl(`${process.env.REACT_APP_API_ENDPOINT}${data.fileName}`);
+                console.log(url);
+            }).catch(err => {
                 console.log(err);
             })
         }else{
@@ -59,11 +115,54 @@ export const BeatUpload = () => {
         if(imageMounted.current) {
             const imgdata = new FormData();
             imgdata.append("file", image[0]);
+            /*
             axios.post(`${process.env.REACT_APP_API_ENDPOINT}upload`, imgdata).then((res) => {
                 console.log(res.data);
                 setImgUrl(`${process.env.REACT_APP_API_ENDPOINT}${res.data.fileName}`);
             })
             .catch((err) => {
+                console.log(err);
+            })
+            */
+           /*
+            fetch(`${process.env.REACT_APP_API_ENDPOINT}upload`,{
+                method: "POST",
+                body: imgdata,
+            }).then((res) => {
+                if(res.ok){
+                console.log(res);
+                console.log(res.fileName);
+                console.log(res.data);
+                setImgUrl(`${process.env.REACT_APP_API_ENDPOINT}${res.filename}`);
+                }
+                else{
+                    console.log("error");
+                }
+            })
+            */
+            async function getFileURL() {
+                const res = await fetch(`${process.env.REACT_APP_API_ENDPOINT}upload`,{
+                    method: "POST",
+                    body: imgdata,
+                });
+                const data = await res.json();
+                console.log(data);
+                if(data.success === null) {
+                    console.log('loading');
+                    return getFileURL()
+                } else if (data.success === true) {
+                    console.log("success");
+                    return data;
+                } else if (data.result === "error") {
+                    console.log("error");
+                    return data;
+                }
+            }
+            getFileURL().then(data => {
+                console.log(data);
+                setImgUrl(`${process.env.REACT_APP_API_ENDPOINT}${data.fileName}`);
+                console.log(imgUrl);
+            }).catch(err => {
                 console.log(err);
             })
         }else{
