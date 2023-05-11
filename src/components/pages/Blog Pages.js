@@ -27,7 +27,7 @@ const BlogPages = () => {
             <a href="/blogs">Return to all blogs</a>
             <h1>{blog.title}</h1>
             <p>{blog.date}</p>
-            <div>{blog.content}</div>
+            <div dangerouslySetInnerHTML={{__html: blog.content}}></div>
         </div>
     );
 }
