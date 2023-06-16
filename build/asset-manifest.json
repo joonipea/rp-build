@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.216ea9c8.css",
-    "main.js": "/static/js/main.ba70c2bb.js",
+    "main.css": "/static/css/main.ce41cb40.css",
+    "main.js": "/static/js/main.09fd59df.js",
     "static/media/blueprint-icons-20.eot?": "/static/media/blueprint-icons-20.ee0fc08bd67fff6852da.eot",
     "static/media/blueprint-icons-20.ttf?": "/static/media/blueprint-icons-20.f9f9b928d6d25a60dafb.ttf",
     "static/media/blueprint-icons-16.eot?": "/static/media/blueprint-icons-16.9023c3cd2b7e0776b6f3.eot",
@@ -13,11 +13,11 @@
     "static/media/icomoon.ttf": "/static/media/icomoon.2d3eb3deb8fabb882e70.ttf",
     "index.html": "/index.html",
     "static/media/logo.svg": "/static/media/logo.f2061e9baa8e6d84a75b090c1ed9e308.svg",
-    "main.216ea9c8.css.map": "/static/css/main.216ea9c8.css.map",
-    "main.ba70c2bb.js.map": "/static/js/main.ba70c2bb.js.map"
+    "main.ce41cb40.css.map": "/static/css/main.ce41cb40.css.map",
+    "main.09fd59df.js.map": "/static/js/main.09fd59df.js.map"
   },
   "entrypoints": [
-    "static/css/main.216ea9c8.css",
-    "static/js/main.ba70c2bb.js"
+    "static/css/main.ce41cb40.css",
+    "static/js/main.09fd59df.js"
   ]
 }
