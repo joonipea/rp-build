@@ -22,11 +22,12 @@ const BlogPages = () => {
             }
         })
     }, []);
+    let date = new Date(blog.date).toLocaleDateString()
     return (
-        <div>
+        <div className="container">
             <a href="/blogs">Return to all blogs</a>
             <h1>{blog.title}</h1>
-            <p>{blog.date}</p>
+            <p>{date}</p>
             <div dangerouslySetInnerHTML={{__html: blog.content}}></div>
         </div>
     );

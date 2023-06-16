@@ -1,5 +1,6 @@
 import React, {useRef, useState} from "react";
 import './WritePosts.css';
+import RichTextEditor from "./Editor";
 
 
                                                  
@@ -7,13 +8,14 @@ import './WritePosts.css';
 const WritePosts = () => {
     const [title, setTitle] = useState("");
     const [date, setDate] = useState("");
+    const [category, setCategory] = useState("");
+    const [content, setContent] = useState("");
 
     const contentRef = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('submitting');
-        const content = contentRef.current.innerHTML;
-        const data = {title, content, date};
+        const data = {title, content, date, category};
         console.log(JSON.stringify(data));
         alert(JSON.stringify(data));
         fetch(`${process.env.REACT_APP_API_ENDPOINT}blogs/addpost`, {
@@ -30,6 +32,12 @@ const WritePosts = () => {
             }
         })
     }
+
+    const handleText = values => {
+        setContent(values);
+        //do something with the values  
+     }
+   
     return (
         <div>
         <h1>Write A Post</h1>
@@ -38,10 +46,20 @@ const WritePosts = () => {
             <input value={title} onChange={e => setTitle(e.target.value)} name="Title" type="text" placeholder="Title" />
             </label>
             <label htmlFor="Date">Date
-            <input value={date} onChange={e => setDate(e.target.value)}name="Date" type="datetime-local" />
+            <input value={date} onChange={e => setDate(e.target.value)} name="Date" type="date" />
             </label>
+            <label htmlFor="Category">Category</label>
+            <select onChange={e => setCategory(e.target.value)} name="Category">
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Tech">Tech</option>
+                <option value="Music">Music</option>
+                <option value="Food">Food</option>
+                <option value="Recurse">Recurse</option>
+            </select>
             <label htmlFor="Content">Content
-            <div ref={contentRef} contentEditable="true" id="editor"></div>
+            <div ref={contentRef} id="editor">
+            <RichTextEditor handleText={handleText} />
+            </div>
             </label>
             <button type="submit">Submit</button>
         </form>

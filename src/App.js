@@ -54,7 +54,7 @@ function App() {
           <Route exact path ='/' element={<Home/>} />
           <Route path='/Music' element={<Music/>} />
           <Route path='/Shows' element={<Shows/>} />
-          <Route path='/Design' element={<Design/>} />
+          <Route path='/Portfolio' element={<Design/>} />
           <Route path='/Merch' element={<Merch/>} />
           <Route path='/Names' element={<Names/>} />
           <Route path='/Beats' element={<Beatstore/>} />

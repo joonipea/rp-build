@@ -17,23 +17,15 @@
 .design-container h2{
     width:100%;
 }
-.design-card{
-    width: 25%;
-    background: rgb(255, 196, 196);
 
-}
 .design-card > a {
-    padding-bottom: 100%;
     display: block;
 }
 .design-image{
     width: calc(75% - 20px);
+    display: none;
 }
-.design-text{
-    width: calc(25% - 20px);
-    padding: 0 15px;
-    min-width: 200px;
-}
+
 @media screen and (max-width: 915px) {
     .design-text{
         width: 100%;
@@ -57,7 +49,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     align-content: center;
     row-gap: 20px;
@@ -68,4 +59,8 @@
     min-width: 50%;
     margin:auto;
 
+}
+
+.caption{
+    font-size: 90%;
 }
