@@ -1,5 +1,5 @@
-.design-container{
-    top:0;
+.design-container {
+    top: 0;
     min-height: 100vh;
     height: fit-content;
     width: 100%;
@@ -7,33 +7,40 @@
     z-index: -1;
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 20px;
 }
-.design-container h2{
-    width:100%;
+.design-container h2 {
+    width: 100%;
+}
+
+.design-card {
+    width: 100%;
+    margin: 10px 0;
+    background: white;
+    padding: 20px;
+    border: 2px black solid;
 }
 
 .design-card > a {
     display: block;
 }
-.design-image{
+.design-image {
     width: calc(75% - 20px);
     display: none;
 }
 
 @media screen and (max-width: 915px) {
-    .design-text{
+    .design-text {
         width: 100%;
     }
-    .design-image{
+    .design-image {
         width: 100%;
     }
-    
 }
 .design-container > p {
     color: rgb(26, 26, 26);
@@ -44,7 +51,7 @@
     text-align: left;
 }
 
-.design-wrapper{
+.design-wrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -57,10 +64,9 @@
 .website-image {
     width: 100%;
     min-width: 50%;
-    margin:auto;
-
+    margin: auto;
 }
 
-.caption{
+.caption {
     font-size: 90%;
 }
