@@ -5,7 +5,8 @@ function HeroSection() {
     return (
         <div className="hero-container">
             <h1>
-                Hi, my name is <a href="/about">June</a>. I'm a full stack web{" "}
+                Hi, my name is <a href="/about">June</a>.<br></br>Thank you for
+                stopping by. I'm a full stack web{" "}
                 <a href="/portfolio">developer</a>,{" "}
                 <a href="https://soundcloud.com/house-of-pentacles-productions/sets/intended-to-cure-letters-for-better-days">
                     musician
