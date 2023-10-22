@@ -81,6 +81,15 @@ function Design() {
                 </div>
                 <h2>Web Apps</h2>
                 <div className="design-card">
+                    <a href="https://bytecrawler.onrender.com">
+                        <h4>Bytecrawler</h4>
+                    </a>
+                    <p>
+                        A rougue-like dungeon crawler with procedural dungeons
+                        built with React, NodeJS, and SurrealDB.
+                    </p>
+                </div>
+                <div className="design-card">
                     <a href="https://rciad.onrender.com">
                         <h4>Real Cooperative in the African Diaspora</h4>
                     </a>
