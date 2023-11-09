@@ -81,17 +81,23 @@ function Design() {
                 </div>
                 <h2>Web Apps</h2>
                 <div className="design-card">
-                    <a href="https://bytecrawler.onrender.com">
+                    <a
+                        className="design-title-card"
+                        href="https://bytecrawler.onrender.com">
                         <h4>Bytecrawler</h4>
+                        <img src="./images/bytecrawler.gif" alt="bytecrawler" />
                     </a>
-                    <p>
+                    <p className="design-information">
                         A rougue-like dungeon crawler with procedural dungeons
                         built with React, NodeJS, and SurrealDB.
                     </p>
                 </div>
                 <div className="design-card">
-                    <a href="https://rciad.onrender.com">
+                    <a
+                        className="design-title-card"
+                        href="https://rciad.onrender.com">
                         <h4>Real Cooperative in the African Diaspora</h4>
+                        <img src="./images/rciad.gif" alt="rciad" />
                     </a>
                     <p>
                         A tool for people in the African diaspora to share parts
@@ -103,10 +109,11 @@ function Design() {
                     </p>
                 </div>
                 <div className="design-card">
-                    <a href="/journal">
+                    <a className="design-title-card" href="/journal">
                         <h4>Journal</h4>
+                        <img src="./images/journal.gif" alt="journal gif" />
                     </a>
-                    <p>
+                    <p className="design-information">
                         A journaling app built with React. Entries are stored
                         locally in your browser using{" "}
                         <a href="https://www.npmjs.com/package/store-js">
@@ -124,8 +131,9 @@ function Design() {
                     </p>
                 </div>
                 <div className="design-card">
-                    <a href="/mathle">
+                    <a className="design-title-card" href="/mathle">
                         <h4>Mathle</h4>
+                        <img src="./images/mathle.gif" alt="mathle gif" />
                     </a>
                     <p>
                         Another Wordle clone, but with math. Built with React.
