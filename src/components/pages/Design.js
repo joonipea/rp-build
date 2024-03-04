@@ -83,6 +83,19 @@ function Design() {
                 <div className="design-card">
                     <a
                         className="design-title-card"
+                        href="https://dunamen.onrender.com">
+                        <h4>Prattle</h4>
+                        <img src="./images/dunamen.gif" alt="prattle" />
+                    </a>
+                    <p className="design-information">
+                        A daily word game based off of Bananagrams. Race against
+                        the clock and your friends to empty your hand of 21
+                        letters. Built with React & Bun.
+                    </p>
+                </div>
+                <div className="design-card">
+                    <a
+                        className="design-title-card"
                         href="https://bytecrawler.onrender.com">
                         <h4>Bytecrawler</h4>
                         <img src="./images/bytecrawler.gif" alt="bytecrawler" />
