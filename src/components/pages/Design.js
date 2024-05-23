@@ -21,15 +21,14 @@ function Design() {
                             handwoven chains and signature techniques.
                         </p>
                         <p>
-                            As the sole developer I've designed, built and
-                            tested multiple iterations of the website. I've
-                            worked closely with the owners to ensure that their
-                            story is told on every page. Amáli is a Shopify site
-                            and is currently built on liquid, HTML, CSS, and
-                            Javascript as well as custom built apps made with
-                            React, Polaris, Express, Node, and PostgresQL. A new
-                            site is currently being built with Shopify's new
-                            framework Hydrogen.
+                            I've designed, built and tested multiple iterations
+                            of the website. I've worked closely with the owners
+                            to ensure that their story is told on every page.
+                            Amáli is a Shopify site and is currently built on
+                            liquid, HTML, CSS, and Javascript as well as custom
+                            built apps made with React, Polaris, Express, Node,
+                            and PostgresQL. A new site is currently being built
+                            with Shopify's new framework Hydrogen.
                         </p>
                     </div>
                 </div>
