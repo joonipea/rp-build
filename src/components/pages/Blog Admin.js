@@ -15,7 +15,7 @@ function BlogAdmin(){
           if (response.ok) {
             const data = await response.json()
             setUserContext(oldValues => {
-              return { ...oldValues, token: data.token, adminStatus: data.adminStatus }
+              return { ...oldValues, token: data.token }
             })
           } else {
             setUserContext(oldValues => {
@@ -23,7 +23,7 @@ function BlogAdmin(){
             })
           }
           // call refreshToken every 5 minutes to renew the authentication token.
-          setTimeout(verifyUser, 5 * 60 * 1000)
+          setTimeout(verifyUser, 5 * 55 * 1000)
         })
       }, [setUserContext])
     
