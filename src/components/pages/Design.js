@@ -7,8 +7,8 @@ function Design() {
         <>
             <DynamicBackground />
             <div id="design" className="design-container">
-                <meta name="robots" content="noindex"></meta>
-                <h2>Websites</h2>
+                {/* <meta name="robots" content="noindex"></meta> */}
+                {/* <h2>Websites</h2>
                 <div className="design-card">
                     <div className="design-text">
                         <p className="caption">June 2020-Present</p>
@@ -77,8 +77,8 @@ function Design() {
                             Node.
                         </p>
                     </div>
-                </div>
-                <h2>Web Apps</h2>
+                </div> */}
+                {/* <h2>Web Apps</h2> */}
                 <div className="design-card">
                     <a
                         className="design-title-card"
