@@ -1,5 +1,5 @@
 ---
 deployment:
     tasks:
-        - export DEPLOYPATH=/home/aks4ufj9w3ja/public_html/
+        - export DEPLOYPATH=/home/joonipea/public_html/
         - /bin/cp -a ./build/. $DEPLOYPATH
